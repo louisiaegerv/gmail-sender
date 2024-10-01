@@ -32,7 +32,7 @@ export default function EmailForm() {
       } else {
         setStatus('Failed to send email. Please try again.')
       }
-    } catch (error) {
+    } catch {
       setStatus('An error occurred. Please try again.')
     }
   }

@@ -1,13 +1,11 @@
 import SignInButton from './components/SignInButton'
 import ComposePage from './compose/page'
 import { getServerSession } from 'next-auth/next'
-import { authOptions } from './api/auth/[...nextauth]/route'
+import { authOptions } from '@/lib/authOptions'
 
 export default async function Home() {
 
   const session = await getServerSession(authOptions)
-
-  // if (!session) {}
 
   return (
     <div className={`flex flex-col md:flex-row w-full h-screen items-center
